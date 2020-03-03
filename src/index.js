@@ -5,13 +5,14 @@ const chunkImplementations = {
     '1.10': require('./pc/1.9/chunk'),
     1.11: require('./pc/1.9/chunk'),
     1.12: require('./pc/1.9/chunk'),
-    1.13: require('./pc/1.13/chunk')
+    1.13: require('./pc/1.13/chunk'),
+    1.14: require('./pc/1.14/chunk')
   },
   pe: {
     0.14: require('./pe/0.14/chunk'),
     '1.0': require('./pe/1.0/chunk')
   }
-}
+} // Why do we need to require all of them, could we not change this to a system that only requires the chunk class that is needed?
 
 module.exports = loader
 
